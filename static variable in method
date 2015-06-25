@@ -1,0 +1,19 @@
+<?php
+
+class Test
+{
+    public $num;
+    
+    public function __construct()
+    {
+        static $pagerNum;
+        $pagerNum++;
+        $this->num = $pagerNum;
+    }
+}
+
+$t = new Test();
+echo $t->num. PHP_EOL;
+
+$t = new Test();
+echo $t->num;
